@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Abstract;
 using Entities.Concrete;
 
-namespace DataAccess.Concrete.EntityFramework
+namespace DataAccess.Concrete.InMemory
 {
-    public class EntityFrameworkProductDal : IProductDal
+    public class InMemoryCarDal : ICarDal
     {
         private List<Car> _cars;
 
-        public EntityFrameworkProductDal()
+        public InMemoryCarDal()
         {
             _cars = new List<Car>()
             {
@@ -30,11 +31,20 @@ namespace DataAccess.Concrete.EntityFramework
         }
         public List<Car> GetAll()
         {
-            Console.WriteLine("Coming soon....");
             return _cars;
         }
 
         public Car GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Car Get(Expression<Func<Car, bool>> filter)
         {
             throw new NotImplementedException();
         }

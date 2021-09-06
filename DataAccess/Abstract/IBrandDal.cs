@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Entities.Concrete;
 
-namespace Business.Abstract
+namespace DataAccess.Abstract
 {
-    public interface IProductService
+    public interface IBrandDal : IEntityRepository<Brand>
     {
-        List<Car> GetAll();
+
     }
 }

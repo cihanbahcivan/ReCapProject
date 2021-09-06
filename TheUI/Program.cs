@@ -2,6 +2,7 @@
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
+using Entities.Concrete;
 
 namespace TheUI
 {
@@ -10,12 +11,15 @@ namespace TheUI
         static void Main(string[] args)
         {
 
-            ProductManager productManager = new ProductManager(new InMemoryProductDal());
+            CarManager carManager = new CarManager(new EfCarDal());
 
-            foreach (var car in productManager.GetAll())
+            foreach (var car in carManager.GetAll())
             {
                 Console.WriteLine(car.Description);
             }
+
+            Console.WriteLine(carManager.Add(new Car()
+                { Id = 1, BrandId = 1, ColorId = 1, Description = "Aciklama", DailyPrice = 100, ModelYear = 2020 }));
         }
     }
 }
