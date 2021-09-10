@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfColorDal : IColorDal
     {
-        public void Add(Color entity)
+        public void Insert(Color entity)
         {
             using (ReCapProjectContext context = new ReCapProjectContext())
             {

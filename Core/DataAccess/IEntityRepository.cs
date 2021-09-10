@@ -6,8 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Entities;
 
-
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     public interface IEntityRepository<T> where T : class, IEntity, new()
     {

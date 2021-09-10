@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace DataAccess.Concrete.InMemory
 {
@@ -29,17 +30,8 @@ namespace DataAccess.Concrete.InMemory
                 new Car(){Id= 10,BrandId = 4,ColorId = 9,DailyPrice = 750,Description = "350Z",ModelYear = 2001}
             };
         }
-        public List<Car> GetAll()
-        {
-            return _cars;
-        }
 
-        public Car GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        public void Delete(Car entity)
         {
             throw new NotImplementedException();
         }
@@ -49,17 +41,22 @@ namespace DataAccess.Concrete.InMemory
             throw new NotImplementedException();
         }
 
-        public void Add(Car car)
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Car car)
+        public void Insert(Car entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Car car)
+        public void Update(Car entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<CarDetailDto> GetProductDetails()
         {
             throw new NotImplementedException();
         }

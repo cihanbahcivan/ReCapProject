@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfBrandDal : IBrandDal
     {
-        public void Add(Brand entity)
+        public void Insert(Brand entity)
         {
             using (ReCapProjectContext context = new ReCapProjectContext())
             {
