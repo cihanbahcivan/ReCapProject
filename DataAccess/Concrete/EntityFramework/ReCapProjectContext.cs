@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-SJMB6FQ;Database=ReCapProject;Integrated Security=True;");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-SJMB6FQ;Database=CarRentalProject;Integrated Security=True;");
         }
 
         public DbSet<Color> Colors { get; set; }

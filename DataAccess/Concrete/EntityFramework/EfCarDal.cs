@@ -34,7 +34,7 @@ namespace DataAccess.Concrete.EntityFramework
                 context.SaveChanges();
             }
         }
-
+        
         public Car Get(Expression<Func<Car, bool>> filter)
         {
             using (ReCapProjectContext context = new ReCapProjectContext())
@@ -69,13 +69,13 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from car in context.Cars
                     join brand in context.Brands
-                        on car.BrandId equals brand.Id
+                        on car.BrandId equals brand.BrandId
                     join color in context.Colors
                         on car.ColorId equals color.ColorId
                     select new CarDetailDto
                     {
                         CarName = car.Description,
-                        BrandName = brand.Name,
+                        BrandName = brand.BrandName,
                         ColorName = color.ColorName,
                         DailyPrice = car.DailyPrice
                     };
