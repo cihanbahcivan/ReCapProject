@@ -15,6 +15,12 @@ namespace Business.Constants
         public static string ProductsListed = "Ürünler listelendi";
         public static string ProductUpdated = "Ürünler listelendi";
         public static string ProductDeleted = "Ürünler listelendi";
+        internal static string ImageAdded = "Resim eklendi";
+        internal static string ImageDeleted = "Resim silindi";
+        internal static string ImagesListed = "Resimler listelendi";
+        internal static string ImageUpdated = "Resim güncellendi";
+        internal static string CarImageLimitExceded = "Sayı limitine ulaşıldı !";
+        internal static string ImageNotFound = "Resim bulunamadı";
         //public static string ProductsListed = "Ürünler listelendi";
 
     }
